@@ -12,7 +12,7 @@ const getAllReports = async (req, res) => {
 
 const getAllUsers = async (req, res) => {
   try {
-    const result = await db.query('SELECT id, full_name, email, role FROM users ORDER BY id DESC');
+    const result = await db.query('SELECT id, fullName, email, role FROM users ORDER BY id DESC');
     res.json(result.rows);
   } catch (err) {
     console.error('Error fetching users:', err);
